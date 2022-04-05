@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  // outline: 1px solid red;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 1440px;
+  }
+}

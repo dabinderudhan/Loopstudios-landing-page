@@ -1,0 +1,104 @@
+.footer {
+  background-color: $color-black;
+  gap: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &-wrapper {
+    gap: 1rem;
+  }
+
+  &-logo {
+    width: 40%;
+  }
+
+  &-nav {
+    margin-top: 1.5rem;
+    color: $color-white;
+    font-size: 1rem;
+
+    &--list {
+      gap: 1rem;
+    }
+  }
+
+  &-icons {
+    margin-top: 1.5rem;
+    gap: 1rem;
+  }
+
+  &-copy {
+    color: $color-light;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (min-width: 900px) {
+  .footer {
+    &-wrapper {
+      max-width: 1110px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-areas:
+        "logo icons"
+        "nav copyright";
+      gap: 1rem;
+      justify-content: space-between;
+      padding-inline: 2rem;
+    }
+
+    &-logo {
+      grid-area: logo;
+    }
+
+    &-nav {
+      margin-top: 0;
+      grid-area: nav;
+
+      &--list {
+        flex-direction: row;
+        gap: 2rem;
+      }
+    }
+
+    &-icons {
+      cursor: pointer;
+      margin-top: 0;
+      width: 100%;
+      height: 100%;
+      grid-area: icons;
+      justify-content: end;
+
+      & .underline {
+        width: 25px;
+        display: block;
+
+        &::after {
+          content: "";
+          width: 25px;
+          height: 2px;
+          background-color: $color-white;
+          display: block;
+          margin-top: 0.5rem;
+          margin-inline: auto;
+          opacity: 0;
+        }
+
+        &:hover {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
